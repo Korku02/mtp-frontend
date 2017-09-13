@@ -1,0 +1,71 @@
+<div class="valign-wrapper register-page" ng-controller = "MainCtrl">
+
+<form class="login-card" name="registerForm" md-whiteframe="1">
+<h1>Welcome to the Student Ebook Portal</h1>
+
+<div class="" layout = "row" layout-xs = "column">
+  <md-input-container class="md-icon-float md-block " flex-gt-sm = "50">
+    <label>Email</label>
+    <md-icon>mail</md-icon>
+      <input required md-no-asterisk name="email" ng-model="user.email">
+      <div ng-messages="registerForm.email.$error">
+        <div ng-message="required">This is required.</div>
+      </div>
+    </md-input-container>
+    <md-input-container class="md-icon-float md-block " flex-gt-sm = "50">
+      <label>Name</label>
+      <md-icon>edit</md-icon>
+        <input required md-no-asterisk name="name" ng-model="user.name">
+        <div ng-messages="registerForm.name.$error">
+          <div ng-message="required">This is required.</div>
+        </div>
+      </md-input-container>
+  </div>
+  <div class="" layout = "row" layout-xs = "column">
+    <md-input-container class="md-icon-float md-block" flex-gt-sm = "50">
+      <label>Password</label>
+      <md-icon>vpn_key</md-icon>
+      <input required ng-model="user.password" md-no-asterisk type="password" name = "password">
+      <div ng-messages="registerForm.password.$error" role="alert">
+        <div ng-message="required">This is required.</div>
+      </div>
+    </md-input-container>
+    <md-input-container class="md-icon-float md-block" flex-gt-sm = "50">
+      <label>Confirm Password</label>
+      <md-icon>vpn_key</md-icon>
+      <input required ng-model="user.confirm_password" md-no-asterisk type="password" name = "confirm_password">
+      <div ng-messages="registerForm.confirm_password.$error" role="alert">
+        <div ng-message="required">This is required.</div>
+      </div>
+    </md-input-container>
+  </div>
+  <div class="" layout="row" layout-xs="column">
+    <md-input-container class="md-icon-float md-block " flex-gt-sm = {{flex}}>
+      <label>Role</label>
+      <md-icon>person</md-icon>
+      <md-select required name="roleType" ng-model="user.role">
+        <md-option  value="Student">Student</md-option>
+        <md-option  value="Teacher">Teacher</md-option>
+      </md-select>
+      </md-input-container>
+      <md-input-container class="md-icon-float md-block " flex-gt-sm = "50" ng-show = "chechRole(user.role)">
+        <label>Class</label>
+        <md-icon>person</md-icon>
+        <md-select  name="class" ng-model="user.class">
+          <md-option  value={{class}} ng-repeat = "class in classes">{{class}}</md-option>
+
+        </md-select>
+        </md-input-container>
+
+  </div>
+  <div class="" layout = "row" layout-xs = "column">
+
+  </div>
+  <div layout = "row" layout-align = "center center">
+  <md-button value = "Submit valid inputs" ng-disabled="registerForm.$invalid" class="md-raised btn1" ng-click = "signUp(user)">Register</md-button>
+  </div>
+  <div layout="row" layout-sm="column" layout-align="center center" >
+      <md-progress-linear  ng-show = "isRegister" md-mode="indeterminate"></md-progress-linear>
+  </div>
+</form>
+</div>

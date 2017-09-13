@@ -1,0 +1,239 @@
+.center-margin {
+  margin: 0 auto;
+}
+
+.not-visible {
+  visibility: hidden;
+}
+
+.valign-wrapper {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 576px) {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+    max-width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+    max-width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+    max-width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .hide-on-med-and-down {
+    display: none !important;
+  }
+}
+.center {
+  text-align: center;
+}
+
+.test {
+  border: 1px solid red;
+}
+
+.login-card {
+  min-height: 40%;
+  width: 30%;
+  text-align: center;
+  background-color: #ffffff;
+  transition: box-shadow 0.3s ease-in-out;
+  padding: 20px;
+  margin: 0 auto;
+  border-radius: 3px;
+}
+.login-card md-icon {
+  color: #0D47A1;
+}
+.login-card .login-head {
+  font-size: 2em;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+  .login-card {
+    width: 60%;
+    min-height: 60%;
+  }
+}
+@media only screen and (max-width: 599px) {
+  .login-card {
+    width: 80%;
+    min-height: 70%;
+  }
+}
+.register-page {
+  background-color: #B2DFDB;
+  height: 100vh;
+}
+.register-page h1 {
+  font-size: 1.5em;
+  font-family: "Montserrat", sans-serif;
+}
+.register-page md-icon {
+  color: #009688;
+}
+.register-page .btn1 {
+  background-color: #009688;
+}
+.register-page .btn1:hover {
+  background-color: #004D40;
+}
+
+.left-flex {
+  min-height: 100vh;
+  background-color: #B2DFDB;
+}
+.left-flex .profile-photo {
+  min-height: 20%;
+}
+.left-flex .profile-photo img {
+  border-radius: 50%;
+  height: 20vh;
+  padding: 10px;
+}
+.left-flex .user-data {
+  min-height: 100%;
+  padding: 0px 10px;
+}
+.left-flex .user-data h1 {
+  font-size: 1.1em;
+  font-family: "Varela Round", sans-serif;
+  color: #37474F;
+}
+.left-flex .user-data h2 {
+  font-size: 1em;
+  font-family: "Varela Round", sans-serif;
+  color: #37474F;
+}
+
+.right-flex {
+  min-height: 100vh;
+  padding: 5px;
+}
+.right-flex .header-right {
+  min-height: 7vh;
+  position: relative;
+  background-color: #B2DFDB;
+}
+.right-flex .header-right md-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.right-flex .header-right h1 {
+  font-size: 1.3em;
+  font-family: "Varela Round", sans-serif;
+  color: #37474F;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 5px;
+}
+.right-flex .header-right .btn2 {
+  background-color: #009688;
+  color: #ffffff;
+  min-height: 3vh;
+  position: absolute;
+  right: 1%;
+  margin: 5px;
+  top: 0;
+}
+.right-flex .header-right .btn2:hover {
+  background-color: #00897B;
+}
+.right-flex .resources-list {
+  width: 100%;
+  list-style-type: none;
+  font-family: "Varela Round", sans-serif;
+}
+.right-flex .resources-list li {
+  width: 100%;
+}
+.right-flex .head-line h1 {
+  font-size: 2em;
+  font-family: "Varela Round", sans-serif;
+}
+
+.home-page {
+  padding: 0;
+  margin: 0;
+}
+
+.files1 .files1-head {
+  font-size: 1.2em;
+  font-family: "Varela Round", sans-serif;
+  padding: 10px;
+  font-weight: 600;
+}
+.files1 .files1-main {
+  font-size: 1em;
+  font-family: "Varela Round", sans-serif;
+  padding: 5px 10px;
+}
+.files1 .files1-main a {
+  text-decoration: none;
+  color: #009688;
+}
+.files1 .files1-main:nth-child(even) {
+  background-color: #B2DFDB;
+}
+
+.upload-form {
+  padding: 20px;
+}
+.upload-form h1 {
+  font-size: 1.6em;
+  font-family: "Varela Round", sans-serif;
+}

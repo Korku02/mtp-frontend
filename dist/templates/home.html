@@ -1,0 +1,70 @@
+<div class="" ng-controller = "MainCtrl" ng-init = "fileLoad()">
+
+  <div  layout="row" class="home-page" >
+    <div class=" left-flex" flex ="15" hide-xs hide-sm layout-align = "center center">
+      <div class="profile-photo center">
+        <img src="https://api.adorable.io/avatars/285/{{userDetails.name}}" alt="">
+      </div>
+      <div class="user-data">
+        <h1>Hey,<br> {{userDetails.name}}</h1>
+        <h2>Role: {{userDetails.roleType}}</h1>
+
+        <md-button ng-if="userDetails.roleType == 'Teacher' " ng-click = "showAdvanced()" class="btn1" md-whiteframe="1">Upload Resource</md-button>
+      </div>
+    </div>
+    <div class=" right-flex" flex ="100">
+      <div class="header-right" layout-align = "center center" md-whiteframe="1">
+        <h1>Welcome!</h1>
+        <md-button  ng-click = "logOut()" class="btn2" md-whiteframe="1">Logout</md-button>
+      </div>
+      <div class="" layout="row">
+        <!-- <h1>Find the resources</h1> -->
+
+          <md-input-container class="md-icon-float md-block " flex-gt-sm = "30">
+            <label>Filer by Class/Division</label>
+            <md-icon>code</md-icon>
+            <md-select name="division" ng-model="search.division">
+              <md-option  value="all" ng-click = "filterFiles('all')">All</md-option>
+              <md-option  value={{data}} ng-repeat = "data in classes" ng-click="filterFiles(data)">{{data}}</md-option>
+            </md-select>
+            </md-input-container>
+          </div>
+
+
+      <div class="head-line" layout="row">
+        <h1>Resources</h1>
+
+      </div>
+      <div class="Files1">
+        <div class="files1-head" layout="row">
+          <div class="" flex="10">
+            S.No
+          </div>
+          <div class="" flex="30">
+            File Name
+          </div>
+          <div class="" flex="60">
+            Url
+          </div>
+        </div>
+        <div class=" files1-main" layout="row" ng-repeat = "data in Files" md-whiteframe="1">
+
+          <div class="" flex="10">
+            {{$index}}
+          </div>
+          <div class="" flex="30">
+            {{data.name}}
+          </div>
+          <div class="" flex="60">
+            <a href={{data.url}}>
+              {{data.url}}
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>

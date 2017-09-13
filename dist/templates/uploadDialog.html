@@ -1,0 +1,35 @@
+
+<div class="" ng-controller="uploadCtrl">
+  <form name="uploadForm" class="upload-form" >
+    <div class="" layout = "row">
+      <h1>Upload a Resource File</h1>
+    </div>
+  <div class=" center " layout-align = "center center">
+    <div layout = "row"  layout-align = "center" >
+      <md-input-container class="" flex-gt-sm = "100" >
+        <label>File Name</label>
+          <input required class = "input-box" name="name" ng-model="file.file_name">
+        <div ng-messages="uploadForm.file.$error">
+          <div ng-message="required">This is required.</div>
+        </div>
+     </md-input-container>
+    </div>
+    <div layout = "row"  layout-align = "center" >
+      <md-input-container class="md-icon-float md-block " flex-gt-sm = "100">
+        <label>Class/Division</label>
+        <md-select  name="class" ng-model="user.class">
+          <md-option  value={{class}} ng-repeat = "class in classes">{{class}}</md-option>
+
+        </md-select>
+        </md-input-container>
+    </div>
+    <div layout = "row"  layout-align = "center" >
+      <md-input-container class="" flex-gt-sm = "100">
+        <input aria-label ="true" type="file" file-model="partneruploadedFile" class="upload" name="file" ng-model="file.file_data" />
+      </md-input-container>
+    </div>
+    <div class="" layout = "row" layout-align = "center center">
+      <md-button class="md-raised md-primary" ng-click = "uploadFile(file)">Submit</md-button>
+    </div>
+  </form>
+</div>
